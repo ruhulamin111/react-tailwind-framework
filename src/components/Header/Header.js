@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import { Bars4Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
-
 const Header = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav>
+        <nav className='bg-purple-300'>
             <div onClick={() => setOpen(!open)} className='h-7 w-7 md:hidden'>
                 {
                     open ? <XMarkIcon></XMarkIcon> : <Bars4Icon></Bars4Icon>
                 }
             </div>
-            <ul className={`md:flex text-xl justify-center py-3 bg-purple-300 absolute duration-500 ease-in ${open ? 'top-7' : 'top-[-220px]'} `}>
+            <ul className={`md:flex text-xl justify-center py-3 w-full bg-purple-300 absolute md:static duration-500 ease-in ${open ? 'top-7' : 'top-[-220px]'} `}>
                 <li className='mr-10 '><a href="/home">Home</a></li>
                 <li className='mr-10 '><a href="/men">Men</a></li>
                 <li className='mr-10 '><a href="/women">Women</a></li>
