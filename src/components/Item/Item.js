@@ -1,4 +1,4 @@
-import { CreditCardIcon, ShoppingCartIcon } from '@heroicons/react/24/solid';
+import { CreditCardIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import Benefits from '../Benefits/Benefits';
 
@@ -8,9 +8,9 @@ const Item = ({ item }) => {
 
     return (
         <div className='bg-purple-100 p-5 rounded-lg'>
-            <h1 className='bg-purple-500 p-5 rounded-lg text-xl font-thin text-white'>{name}</h1>
+            <h1 className='bg-purple-500 p-3 rounded-lg text-xl font-thin text-white my-3'>{name}</h1>
             <p>
-                <span className='text-4xl font-bold text-purple-600'>{price}</span>
+                <span className='text-4xl font-bold text-purple-600'>$ {price}</span>
                 <span>/{duration}</span>
             </p>
             <div className='my-5'>
