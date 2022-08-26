@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { PieChart, Pie } from 'recharts';
 
 const SpecialChart = () => {
     const [months, setMonths] = useState([]);
@@ -21,6 +22,10 @@ const SpecialChart = () => {
 
     return (
         <div>
+            <PieChart width={800} height={400} >
+                <Pie data={months} dataKey="value" nameKey="name" cx="50%" cy="50%" fill="#d859e2" ></Pie>
+                <Pie data={months} dataKey="value" nameKey="name" cx="50%" cy="50%" fill="#9829b2" innerRadius="80" label></Pie>
+            </PieChart>
 
         </div>
     );
